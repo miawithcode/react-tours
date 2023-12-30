@@ -1,7 +1,7 @@
+import { useState } from 'react';
 import Tour from './Tour';
 
 const Tours = ({ tours, removeTour }) => {
-  console.log(tours);
   return (
     <section>
       <div>
