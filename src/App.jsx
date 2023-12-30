@@ -11,7 +11,7 @@ function App() {
   const removeTour = (id) => {
     const newTours = tours.filter((tour) => tour.id !== id);
     setTours(newTours);
-  }
+  };
 
   const fetchTours = async () => {
     setIsLoading(true);
@@ -33,6 +33,15 @@ function App() {
     return (
       <main>
         <Loading />
+      </main>
+    );
+  }
+
+  if (tours.length === 0) {
+    return (
+      <main>
+        <h2>No Tours Left</h2>
+        <button onClick={fetchTours}>Refresh</button>
       </main>
     );
   }
